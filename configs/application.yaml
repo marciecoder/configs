@@ -1,0 +1,11 @@
+server:
+  port: ${SERVER_PORT:8200}
+eureka:
+  instance:
+    preferIpAddress: true
+    leaseRenewalIntervalInSeconds: 10
+  client:
+    registerWithEureka: ${EUREKA_CLIENT_REGISTER:true}
+    registryFetchIntervalSeconds: 5
+    serviceUrl:
+      defaultZone: ${EUREKA_SERVICE_URL:http://localhost:8761/eureka/}
